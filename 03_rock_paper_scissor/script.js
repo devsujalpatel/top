@@ -40,11 +40,11 @@ function playGame() {
 
   }
 
-  while (humanScore < 5 && computerScore < 5) {
+  for (i = 0; i < 5; i++) {
     playRound(getHumanChoice(), getComputerChoice());
   }
 
-  if (humanScore === 5) {
+  if (humanScore > computerScore) {
     console.log("You won the game!");
   } else {
     console.log("Computer won the game!");
